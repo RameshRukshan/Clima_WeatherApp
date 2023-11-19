@@ -8,7 +8,7 @@
     android:backgroundTintMode="src_in"
     tools:context=".MainActivity">
 
-    
+
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="448dp"
         android:layout_height="277dp"
