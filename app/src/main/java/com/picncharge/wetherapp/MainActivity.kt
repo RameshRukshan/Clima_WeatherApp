@@ -1,6 +1,7 @@
 package com.picncharge.wetherapp
 
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -50,7 +51,10 @@ class MainActivity : AppCompatActivity() {
                 stringBuilder.append(text)
             }
             var city = (stringBuilder.toString()).toString()
-            
+
+            var go_to_home = Intent(this, Home::class.java)
+            go_to_home.putExtra("City", city)
+            startActivity(go_to_home)
         }
 
     }
