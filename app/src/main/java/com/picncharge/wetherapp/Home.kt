@@ -3,6 +3,7 @@ package com.picncharge.wetherapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -18,6 +19,12 @@ class Home : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+//---------------------------------------- Hide the status bar.
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        actionBar?.hide()
+//------------------------------------
+
         setContentView(R.layout.activity_home)
         var city = intent.getStringExtra("City")
 
@@ -31,7 +38,7 @@ class Home : AppCompatActivity() {
     }
 
     private fun fetchCatImage() {
-        Log.e("CatResponse", "Fetching Cat Image")
+        Log.e("API Responce", "Getting Responces")
 
         var city = intent.getStringExtra("City")
 
