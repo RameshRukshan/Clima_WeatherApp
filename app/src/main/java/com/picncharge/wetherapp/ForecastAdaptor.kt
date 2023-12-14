@@ -16,8 +16,7 @@ class ForecastAdaptor(private val weatherList : ArrayList<forecasting>) :
     RecyclerView.Adapter<ForecastAdaptor.MyViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity_weather_forecast,
-            parent, false )
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity_forecast_data, parent, false )
         return MyViewHolder(itemView)
 
     }
@@ -42,16 +41,12 @@ class ForecastAdaptor(private val weatherList : ArrayList<forecasting>) :
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = weatherList[position]
-        //val onlyTime = currentItem.time
-        //if (filterForToday(onlyTime)){
         holder.titleImage.setImageResource(currentItem.iconId)
         holder.tvTime.text = currentItem.time
         holder.tvTemperature.text = currentItem.temp
-        // }
     }
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-
         val titleImage : ImageView = itemView.findViewById(R.id.img)
         val tvTime : TextView = itemView.findViewById(R.id.txt_date_time)
         val tvTemperature : TextView = itemView.findViewById(R.id.txt_temperature)

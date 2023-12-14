@@ -17,6 +17,9 @@
         android:theme="@style/Theme.WetherApp"
         tools:targetApi="34">
         <activity
+            android:name=".ForecastData"
+            android:exported="false" />
+        <activity
             android:name=".ViewAdaptor"
             android:exported="false" />
         <activity

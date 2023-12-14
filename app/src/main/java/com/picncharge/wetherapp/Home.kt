@@ -1,6 +1,7 @@
 package com.picncharge.wetherapp
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -52,6 +53,7 @@ class Home : AppCompatActivity() {
 
         w_s_icon = findViewById(R.id.icon)
 
+        //loadCityData("Colombo")
 
         loadCityData(city.toString())
 
@@ -69,7 +71,9 @@ class Home : AppCompatActivity() {
         }
 
         btn_show_more.setOnClickListener(){
-
+            var go_to_forecast = Intent(this, ForecastData::class.java)
+            go_to_forecast.putExtra("City", city)
+            startActivity(go_to_forecast)
         }
 
         //https://api.openweathermap.org/data/2.5/forecast?q=Colombo&appid=8986a26ec8e3a1442e536cae551826b2
@@ -83,15 +87,11 @@ class Home : AppCompatActivity() {
             Log.e("Response", data.toString())
 
             try {
-                // Extract temperature from main object (in Kelvin)
                 val temperatureKelvin = data.getJSONObject("main").getDouble("temp")
 
-                // Convert Kelvin to Celsius
                 val temperatureCelsius = temperatureKelvin - 273.15
-                // Display the temperature in Celsius in the TextView
                 txt_temperature.text = String.format("%.2f °C", temperatureCelsius)
 
-                // Extract Weather Description
                 val weatherArray = data.getJSONArray("weather")
                 if (weatherArray.length() > 0) {
                     val main = weatherArray.getJSONObject(0).getString("main")
@@ -100,17 +100,13 @@ class Home : AppCompatActivity() {
                     txt_weather_condition.text = condition
                 }
 
-                // Extract Humidity
                 val humidity = data.getJSONObject("main").getInt("humidity")
                 txt_humidity.text = "$humidity%"
 
-                // Extract Wind Speed
                 val windSpeed = data.getJSONObject("wind").getDouble("speed")
                 txt_wind_speed.text = String.format("%.2f m/s", windSpeed)
 
-                // Load and display weather icon (similar to your existing code)
-                val imageURL = "https://openweathermap.org/img/w/" +
-                        weatherArray.getJSONObject(0).getString("icon") + ".png"
+                val imageURL = "https://openweathermap.org/img/w/" + weatherArray.getJSONObject(0).getString("icon") + ".png"
                 Picasso.get().load(imageURL).into(w_s_icon)
 
                 txt_city.text = city
