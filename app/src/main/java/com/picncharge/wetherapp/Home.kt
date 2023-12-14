@@ -28,10 +28,6 @@ class Home : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         var city = intent.getStringExtra("City")
 
-        var cityDisplay = findViewById<TextView>(R.id.city)
-        img = findViewById(R.id.img)
-
-        cityDisplay.setText(city)
 
         //https://api.openweathermap.org/data/2.5/forecast?q=Colombo&appid=8986a26ec8e3a1442e536cae551826b2
 

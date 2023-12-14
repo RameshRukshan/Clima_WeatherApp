@@ -4,28 +4,175 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#161619"
     tools:context=".Home">
 
     <TextView
-        android:id="@+id/city"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt_city"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Colombo"
+        android:textAlignment="center"
+        android:textColor="#F8F5F5"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_weather_condition" />
+
+    <TextView
+        android:id="@+id/txt_show_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+        android:text="Show More Info"
+        android:textAlignment="center"
+        android:textColor="#F8F5F5"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_celcious"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="30.01 ℃"
+        android:textAlignment="center"
+        android:textColor="#F8F5F5"
+        android:textSize="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_city" />
+
+    <EditText
+        android:id="@+id/input_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:text="City Name"
+        android:textColor="#F8F5F5"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#FFFFFF"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Search"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/img"
+        android:id="@+id/icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="115dp"
-        app:layout_constraintBottom_toTopOf="@+id/city"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_celcious"
+        app:srcCompat="@drawable/output_onlinegiftools" />
+
+    <TextView
+        android:id="@+id/txt_weather_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weather Condition"
+        android:textAlignment="center"
+        android:textColor="#FFC700"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_city">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Humidity : "
+                android:textAlignment="center"
+                android:textColor="#FFC700"
+                android:textSize="14dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="445dp" />
+
+            <TextView
+                android:id="@+id/txt_humidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="87%"
+                android:textColor="#F8F5F5"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="445dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wind Speed : "
+                android:textAlignment="textEnd"
+                android:textColor="#FFC700"
+                android:textSize="14dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="445dp" />
+
+            <TextView
+                android:id="@+id/txt_wind_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="6.27 m/s"
+                android:textAlignment="textEnd"
+                android:textColor="#F8F5F5"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="445dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
