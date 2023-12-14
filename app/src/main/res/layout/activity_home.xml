@@ -131,7 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
-                android:text="87%"
+                android:text="00%"
                 android:textColor="#F8F5F5"
                 android:textSize="14dp"
                 android:textStyle="bold"
@@ -162,7 +162,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
-                android:text="6.27 m/s"
+                android:text="0.00 m/s"
                 android:textAlignment="textEnd"
                 android:textColor="#F8F5F5"
                 android:textSize="14dp"
@@ -170,9 +170,9 @@
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="445dp" />
         </LinearLayout>
-
-
     </LinearLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
