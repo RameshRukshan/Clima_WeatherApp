@@ -52,8 +52,6 @@ class Home : AppCompatActivity() {
 
         w_s_icon = findViewById(R.id.icon)
 
-        var currentCity = txt
-
 
         loadCityData(city.toString())
 
@@ -63,9 +61,11 @@ class Home : AppCompatActivity() {
         btn_search.setOnClickListener(){
             inp_city = findViewById(R.id.input_city)
 
-            loadCityData(inp_city.toString())
+            city = txt_city.text.toString()
 
-            updateCurrentCity(inp_city.toString())
+            loadCityData(city.toString())
+
+            //updateCurrentCity(inp_city.toString())
         }
 
         btn_show_more.setOnClickListener(){
@@ -113,6 +113,8 @@ class Home : AppCompatActivity() {
                         weatherArray.getJSONObject(0).getString("icon") + ".png"
                 Picasso.get().load(imageURL).into(w_s_icon)
 
+                txt_city.text = city
+
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -129,7 +131,6 @@ class Home : AppCompatActivity() {
         try {
             fileOutputStream = openFileOutput(file, Context.MODE_PRIVATE)
             fileOutputStream.write(data.toByteArray())
-            txt_city.setText("Sucess")
         }catch (e: Exception){
             e.printStackTrace()
         }
