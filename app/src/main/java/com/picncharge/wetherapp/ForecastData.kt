@@ -61,7 +61,6 @@ class ForecastData : AppCompatActivity() {
 
             for (i in 0 until jsonArray.length()) {
                 val item = jsonArray.getJSONObject(i)
-                val dayFilter = item.getString("dt_txt")
                 val dtTxt = item.getString("dt_txt")
                 val temp = item.getJSONObject("main").getString("temp")
                 val icon = item.getJSONArray("weather").getJSONObject(0).getString("icon")

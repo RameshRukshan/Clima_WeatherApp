@@ -54,7 +54,7 @@
         android:layout_marginTop="40dp"
         android:ems="10"
         android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_marginRight="140dp"
         android:inputType="text"
         android:paddingLeft="20dp"
         android:text="City Name"
@@ -91,6 +91,8 @@
         android:id="@+id/txt_weather_condition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="Weather Condition"
         android:textAlignment="center"
         android:textColor="#FFC700"
@@ -171,8 +173,5 @@
                 tools:layout_editor_absoluteY="445dp" />
         </LinearLayout>
     </LinearLayout>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

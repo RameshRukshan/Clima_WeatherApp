@@ -23,20 +23,6 @@ class ForecastAdaptor(private val weatherList : ArrayList<forecasting>) :
     override fun getItemCount(): Int {
         return weatherList.size
     }
-    fun filterForToday(dateTimeString: String): Boolean {
-        val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-
-        try {
-            val todayDate = dateFormat.format(Calendar.getInstance().time)
-            val inputDate = dateFormat.format(dateFormat.parse(dateTimeString) ?: Date())
-
-            return todayDate == inputDate
-        } catch (e: ParseException) {
-            e.printStackTrace()
-        }
-
-        return false
-    }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = weatherList[position]
