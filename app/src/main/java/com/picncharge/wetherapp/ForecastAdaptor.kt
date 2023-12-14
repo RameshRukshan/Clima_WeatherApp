@@ -18,7 +18,6 @@ class ForecastAdaptor(private val weatherList : ArrayList<forecasting>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity_forecast_data, parent, false )
         return MyViewHolder(itemView)
-
     }
 
     override fun getItemCount(): Int {

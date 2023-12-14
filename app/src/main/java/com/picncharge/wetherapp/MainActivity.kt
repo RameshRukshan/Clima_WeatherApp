@@ -30,6 +30,18 @@ class MainActivity : AppCompatActivity() {
 
         btn_continue.setOnClickListener(){
             val file:String = "tempCity.txt"
+/*
+
+---------------------WHEN INIT Setup This will be call
+            val data:String = "Colombo"
+            val fileOutputStream: FileOutputStream
+            try {
+                fileOutputStream = openFileOutput(file, Context.MODE_PRIVATE)
+                fileOutputStream.write(data.toByteArray())
+            }catch (e: Exception){
+                e.printStackTrace()
+            }
+*/
             var fileInputStream: FileInputStream? = null
             fileInputStream = openFileInput(file)
             var inputStreamReader: InputStreamReader = InputStreamReader(fileInputStream)
