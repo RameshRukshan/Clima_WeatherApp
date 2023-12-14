@@ -61,11 +61,11 @@ class Home : AppCompatActivity() {
         btn_search.setOnClickListener(){
             inp_city = findViewById(R.id.input_city)
 
-            city = txt_city.text.toString()
+            city = inp_city.text.toString()
 
             loadCityData(city.toString())
 
-            //updateCurrentCity(inp_city.toString())
+            updateCurrentCity(city.toString())
         }
 
         btn_show_more.setOnClickListener(){

@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:backgroundTint="#FFFFFF"
-        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24black"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         android:text="Continue"
