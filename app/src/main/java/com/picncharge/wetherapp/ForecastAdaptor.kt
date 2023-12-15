@@ -1,5 +1,6 @@
 package com.picncharge.wetherapp
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,6 +30,8 @@ class ForecastAdaptor(private val weatherList : ArrayList<forecasting>) :
         holder.titleImage.setImageResource(currentItem.iconId)
         holder.tvTime.text = currentItem.time
         holder.tvTemperature.text = currentItem.temp
+
+        Log.d("Forcast Adaptor Test", "Binding to positions $position")
     }
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
