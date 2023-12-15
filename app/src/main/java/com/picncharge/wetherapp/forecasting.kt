@@ -1,3 +1,3 @@
 package com.picncharge.wetherapp
 
-data class forecasting(val time: String, val temp: String, val iconId: Int, val main: String)
+data class forecasting(val time: String, val temp: String, val iconId: Int)

@@ -68,7 +68,9 @@ class ForecastData : AppCompatActivity() {
 
                 val iconId = getIconResourceId(icon)
 
-                weatherList.add(forecasting(dtTxt, temp, iconId, main))
+                Log.d("DataAdaptor","Date $dtTxt")
+
+                weatherList.add(forecasting(dtTxt, temp, iconId))
             }
         } catch (e: JSONException) {
             e.printStackTrace()

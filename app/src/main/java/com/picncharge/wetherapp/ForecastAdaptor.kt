@@ -31,10 +31,11 @@ class ForecastAdaptor(private val weatherList : ArrayList<forecasting>) :
         holder.tvTime.text = currentItem.time
         holder.tvTemperature.text = currentItem.temp
 
-        Log.d("Forcast Adaptor Test", "Binding to positions $position")
+        Log.d("ForcastBind", "Binding to positions $position")
     }
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+
         val titleImage : ImageView = itemView.findViewById(R.id.img)
         val tvTime : TextView = itemView.findViewById(R.id.txt_date_time)
         val tvTemperature : TextView = itemView.findViewById(R.id.txt_temperature)
