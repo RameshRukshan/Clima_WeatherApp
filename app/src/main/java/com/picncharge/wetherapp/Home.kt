@@ -96,7 +96,7 @@ class Home : AppCompatActivity() {
                 if (weatherArray.length() > 0) {
                     val main = weatherArray.getJSONObject(0).getString("main")
                     val description = weatherArray.getJSONObject(0).getString("description")
-                    val condition = "$main - $description"
+                    val condition = "$main \n $description"
                     txt_weather_condition.text = condition
                 }
 
