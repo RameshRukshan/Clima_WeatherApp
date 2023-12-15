@@ -78,7 +78,7 @@
                     android:id="@+id/txt_temperature"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Temp ℃"
+                    android:text="25.23 ℃"
                     android:textAlignment="center"
                     android:textColor="#161619"
                     android:textSize="40dp"
@@ -90,11 +90,10 @@
                     android:layout_gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/img"
+                    <pl.droidsonroids.gif.GifImageView
                         android:layout_width="180dp"
                         android:layout_height="150dp"
-                        app:srcCompat="@drawable/output_onlinegiftools" />
+                        android:src="@drawable/output_onlinegiftools"></pl.droidsonroids.gif.GifImageView>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -107,7 +106,7 @@
                             android:id="@+id/txt_humidity"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Humidity : 0.00%"
+                            android:text="Humidity : 90.00%"
                             android:textAlignment="viewStart"
                             android:textColor="#161619"
                             android:textSize="20dp"
@@ -161,7 +160,7 @@
                     android:id="@+id/txt_temperature2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Temp ℃"
+                    android:text="23.24 ℃"
                     android:textAlignment="center"
                     android:textColor="#161619"
                     android:textSize="40dp"
@@ -173,11 +172,10 @@
                     android:layout_gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/img2"
+                    <pl.droidsonroids.gif.GifImageView
                         android:layout_width="180dp"
                         android:layout_height="150dp"
-                        app:srcCompat="@drawable/output_onlinegiftools" />
+                        android:src="@drawable/output_onlinegiftools"></pl.droidsonroids.gif.GifImageView>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -190,7 +188,7 @@
                             android:id="@+id/txt_humidity2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Humidity : 0.00%"
+                            android:text="Humidity : 87.20%"
                             android:textAlignment="viewStart"
                             android:textColor="#161619"
                             android:textSize="20dp"
@@ -244,7 +242,7 @@
                     android:id="@+id/txt_temperature3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Temp ℃"
+                    android:text="27.31 ℃"
                     android:textAlignment="center"
                     android:textColor="#161619"
                     android:textSize="40dp"
@@ -256,11 +254,10 @@
                     android:layout_gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/img3"
+                    <pl.droidsonroids.gif.GifImageView
                         android:layout_width="180dp"
                         android:layout_height="150dp"
-                        app:srcCompat="@drawable/output_onlinegiftools" />
+                        android:src="@drawable/output_onlinegiftools"></pl.droidsonroids.gif.GifImageView>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -273,7 +270,7 @@
                             android:id="@+id/txt_humidity3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Humidity : 0.00%"
+                            android:text="Humidity : 86.00%"
                             android:textAlignment="viewStart"
                             android:textColor="#161619"
                             android:textSize="20dp"
@@ -327,7 +324,7 @@
                     android:id="@+id/txt_temperature4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Temp ℃"
+                    android:text="30.22 ℃"
                     android:textAlignment="center"
                     android:textColor="#161619"
                     android:textSize="40dp"
@@ -339,11 +336,10 @@
                     android:layout_gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/img4"
+                    <pl.droidsonroids.gif.GifImageView
                         android:layout_width="180dp"
                         android:layout_height="150dp"
-                        app:srcCompat="@drawable/output_onlinegiftools" />
+                        android:src="@drawable/output_onlinegiftools"></pl.droidsonroids.gif.GifImageView>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -356,7 +352,7 @@
                             android:id="@+id/txt_humidity4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Humidity : 0.00%"
+                            android:text="Humidity : 90.00%"
                             android:textAlignment="viewStart"
                             android:textColor="#161619"
                             android:textSize="20dp"
@@ -410,7 +406,7 @@
                     android:id="@+id/txt_temperature5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Temp ℃"
+                    android:text="28.24 ℃"
                     android:textAlignment="center"
                     android:textColor="#161619"
                     android:textSize="40dp"
@@ -422,11 +418,10 @@
                     android:layout_gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/img5"
+                    <pl.droidsonroids.gif.GifImageView
                         android:layout_width="180dp"
                         android:layout_height="150dp"
-                        app:srcCompat="@drawable/output_onlinegiftools" />
+                        android:src="@drawable/output_onlinegiftools"></pl.droidsonroids.gif.GifImageView>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -439,7 +434,7 @@
                             android:id="@+id/txt_humidity5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Humidity : 0.00%"
+                            android:text="Humidity : 88.00%"
                             android:textAlignment="viewStart"
                             android:textColor="#161619"
                             android:textSize="20dp"

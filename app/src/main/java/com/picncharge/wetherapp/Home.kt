@@ -37,6 +37,11 @@ class Home : AppCompatActivity() {
     lateinit var inp_city : EditText
     lateinit var btn_search : Button
 
+    var temp = 0;
+    var humidityI = 0;
+    var press = 0;
+    var wind = 0;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -79,6 +84,10 @@ class Home : AppCompatActivity() {
         btn_show_more.setOnClickListener(){
             var go_to_forecast = Intent(this, ForecastData::class.java)
             go_to_forecast.putExtra("City", city)
+            go_to_forecast.putExtra("temp", temp)
+            go_to_forecast.putExtra("humidity", humidityI)
+            go_to_forecast.putExtra("wind", wind)
+            go_to_forecast.putExtra("press", press)
             startActivity(go_to_forecast)
         }
 
@@ -96,6 +105,7 @@ class Home : AppCompatActivity() {
                 val temperatureKelvin = data.getJSONObject("main").getDouble("temp")
 
                 val temperatureCelsius = temperatureKelvin - 273.15
+                temp = temperatureCelsius.toInt()
                 txt_temperature.text = String.format("%.2f °C", temperatureCelsius)
 
                 val weatherArray = data.getJSONArray("weather")
@@ -107,6 +117,7 @@ class Home : AppCompatActivity() {
                 }
 
                 val humidity = data.getJSONObject("main").getInt("humidity")
+                humidityI = humidity.toInt()
                 txt_humidity.text = "$humidity%"
 
                 val seaL = data.getJSONObject("main").getInt("sea_level")
@@ -116,9 +127,11 @@ class Home : AppCompatActivity() {
                 txt_ground_level.text = "$grdLevel meters"
 
                 val preass = data.getJSONObject("main").getInt("pressure")
+                press = preass.toInt()
                 txt_pres.text = "$preass mb"
 
                 val windSpeed = data.getJSONObject("wind").getDouble("speed")
+                wind = windSpeed.toInt()
                 txt_wind_speed.text = String.format("%.2f m/s", windSpeed)
 
                 val imageURL = "https://openweathermap.org/img/w/" + weatherArray.getJSONObject(0).getString("icon") + ".png"

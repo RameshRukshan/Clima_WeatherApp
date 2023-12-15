@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
@@ -19,6 +20,11 @@ class ForecastData : AppCompatActivity() {
     private val weatherList = ArrayList<forecasting>()
 
     lateinit var btn_back : Button
+
+    var temp = ""
+    var humidity = ""
+    var wind = ""
+    var press = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -29,6 +35,13 @@ class ForecastData : AppCompatActivity() {
 
         setContentView(R.layout.activity_forecast_data)
         var city = intent.getStringExtra("City")
+        temp = intent.getStringExtra("temp").toString()
+        humidity = intent.getStringExtra("humidity").toString()
+        wind = intent.getStringExtra("wind").toString()
+        press = intent.getStringExtra("press").toString()
+
+        //fetchDataM()
+
 
         btn_back = findViewById(R.id.btn_back_to_home)
 
@@ -97,5 +110,42 @@ class ForecastData : AppCompatActivity() {
         )
 
         Volley.newRequestQueue(this).add(request)
+    }
+
+    fun fetchDataM(){
+        var txt_temp1 : TextView = findViewById(R.id.txt_temperature)
+        var txt_humi1 : TextView = findViewById(R.id.txt_humidity)
+        var txt_wind1 : TextView = findViewById(R.id.txt_humidity)
+        var txt_press1 : TextView = findViewById(R.id.txt_press)
+        txt_temp1.setText(temp)
+        txt_humi1.setText(humidity)
+
+        var txt_temp2 : TextView = findViewById(R.id.txt_temperature2)
+        var txt_humi2 : TextView = findViewById(R.id.txt_humidity2)
+        var txt_wind2 : TextView = findViewById(R.id.txt_humidity2)
+        var txt_press2 : TextView = findViewById(R.id.txt_press2)
+        txt_temp2.setText(temp)
+        txt_humi2.setText(humidity)
+
+        var txt_temp3 : TextView = findViewById(R.id.txt_temperature3)
+        var txt_humi3 : TextView = findViewById(R.id.txt_humidity3)
+        var txt_wind3 : TextView = findViewById(R.id.txt_humidity3)
+        var txt_press3 : TextView = findViewById(R.id.txt_press3)
+        txt_temp3.setText(temp)
+        txt_humi3.setText(humidity)
+
+        var txt_temp4 : TextView = findViewById(R.id.txt_temperature4)
+        var txt_humi4 : TextView = findViewById(R.id.txt_humidity4)
+        var txt_wind4 : TextView = findViewById(R.id.txt_humidity4)
+        var txt_press4 : TextView = findViewById(R.id.txt_press4)
+        txt_temp4.setText(temp)
+        txt_humi4.setText(humidity)
+
+        var txt_temp5 : TextView = findViewById(R.id.txt_temperature5)
+        var txt_humi5 : TextView = findViewById(R.id.txt_humidity5)
+        var txt_wind5 : TextView = findViewById(R.id.txt_humidity5)
+        var txt_press5 : TextView = findViewById(R.id.txt_press5)
+        txt_temp5.setText(temp)
+        txt_humi5.setText(humidity)
     }
 }
