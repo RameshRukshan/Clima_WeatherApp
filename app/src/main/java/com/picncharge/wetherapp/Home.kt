@@ -30,6 +30,9 @@ class Home : AppCompatActivity() {
     lateinit var txt_wind_speed : TextView
     lateinit var txt_temperature : TextView
     lateinit var txt_weather_condition : TextView
+    lateinit var txt_sea_level : TextView
+    lateinit var txt_ground_level : TextView
+    lateinit var txt_pres : TextView
 
     lateinit var inp_city : EditText
     lateinit var btn_search : Button
@@ -50,6 +53,9 @@ class Home : AppCompatActivity() {
         txt_humidity = findViewById(R.id.txt_humidity)
         txt_wind_speed = findViewById(R.id.txt_wind_speed)
         txt_weather_condition = findViewById(R.id.txt_weather_condition)
+        txt_sea_level = findViewById(R.id.txt_sea_level)
+        txt_ground_level = findViewById(R.id.txt_ground_level)
+        txt_pres = findViewById(R.id.txt_preasure)
 
         w_s_icon = findViewById(R.id.icon)
 
@@ -102,6 +108,15 @@ class Home : AppCompatActivity() {
 
                 val humidity = data.getJSONObject("main").getInt("humidity")
                 txt_humidity.text = "$humidity%"
+
+                val seaL = data.getJSONObject("main").getInt("sea_level")
+                txt_sea_level.text = "$seaL meters"
+
+                val grdLevel = data.getJSONObject("main").getInt("grnd_level")
+                txt_ground_level.text = "$grdLevel meters"
+
+                val preass = data.getJSONObject("main").getInt("pressure")
+                txt_pres.text = "$preass mb"
 
                 val windSpeed = data.getJSONObject("wind").getDouble("speed")
                 txt_wind_speed.text = String.format("%.2f m/s", windSpeed)
